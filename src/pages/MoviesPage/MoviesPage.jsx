@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import SearchBox from "../../components/SearchBox/SearchBox";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import MoviesList from "../../components/MoviesList/MoviesList";
 import { useState, useEffect } from "react";
 import { fetchSearchMovies } from "../../tmdb-api";
@@ -71,7 +71,7 @@ export default function MoviesPage() {
             });
 
             setTotalPages(data.total_pages);
-        } catch (error) {
+        } catch {
             setIsError(true);
         } finally {
             setIsLoading(false);
@@ -95,7 +95,7 @@ export default function MoviesPage() {
 
     return (
         <div className={s.container}>
-            <SearchBox
+            <SearchBar
                 onSearch={handleSearch}
                 value={currentQuery}
                 onChange={setCurrentQuery}

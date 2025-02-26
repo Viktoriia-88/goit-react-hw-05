@@ -8,8 +8,7 @@ export default function SearchBar({ onSearch, value, onChange }) {
             toast("Please enter your query", {
                 style: {
                     background: "transparent",
-                    color: "rgb(142, 235, 79)",
-                    fontStyle: "italic",
+                    color: "rgb(122, 234, 47)",
                     boxShadow: "none",
                 },
                 icon: "⚡",

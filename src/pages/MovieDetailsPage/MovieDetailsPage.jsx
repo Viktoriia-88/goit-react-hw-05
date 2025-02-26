@@ -22,7 +22,7 @@ export default function MovieDetailsPage() {
                 setIsLoading(true);
                 const data = await fetchMoviesDetails(id);
                 setDetails(data);
-            } catch (error) {
+            } catch {
                 setIsError(true);
             } finally {
                 setIsLoading(false);
@@ -48,10 +48,10 @@ export default function MovieDetailsPage() {
                                 : defaultImg
                         }
                         alt={`poster ${details.title}`}
-                        width={360}
+                        width={250}
                     />
                     <p className={s.movieVote}>
-                        <HiOutlineStar fill="rgb(142, 235, 79)" />{" "}
+                        <HiOutlineStar fill="rgb(255, 212, 40)" />{" "}
                         {details.vote_average?.toFixed(1)}
                     </p>
                 </div>
@@ -90,7 +90,7 @@ export default function MovieDetailsPage() {
             </div>
 
             <div>
-                <h2 className={s.topicAdd}>Additional information</h2>
+                <h2 className={s.topicAdd}>Additional information:</h2>
                 <ul className={s.moreInfoList}>
                     <li>
                         <Link className={s.more} to="cast">

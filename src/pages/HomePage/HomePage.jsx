@@ -2,12 +2,9 @@ import LoadMore from "../../components/LoadMore/LoadMore";
 import MoviesList from "../../components/MoviesList/MoviesList";
 import { fetchTrendingMovies } from "../../tmdb-api";
 import { useEffect, useState, useRef } from "react";
-
-import ThanksForTMDB from "../../components/ThanksToTMDB/ThanksForTMDB";
 import Loader from "../../components/Loader/Loader";
 import s from "./HomePage.module.css";
 import Error from "../../components/Error/Error";
-
 
 export default function HomePage() {
     const [movies, setMovies] = useState([]);
@@ -55,7 +52,7 @@ export default function HomePage() {
                 });
 
                 setTotalPages(data.total_pages);
-            } catch (error) {
+            } catch {
                 setIsError(true);
             } finally {
                 setIsLoading(false);
@@ -80,7 +77,6 @@ export default function HomePage() {
                     <LoadMore onClick={loadMore} />
                 )}
             </main>
-            <ThanksForTMDB />
         </div>
     );
 }

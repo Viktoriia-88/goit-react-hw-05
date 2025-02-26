@@ -49,10 +49,10 @@ export default function MoviesList({ movies }) {
                                     <img
                                         src={getImageSrc(movie.poster_path)}
                                         alt={`poster ${movie.title}`}
-                                        width={320}
+                                        width={250}
                                     />
                                     <p className={s.movieVote}>
-                                        <HiOutlineStar fill="rgb(142, 235, 79)" />{" "}
+                                        <HiOutlineStar fill="rgb(255, 212, 40)" />{" "}
                                         {movie.vote_average.toFixed(1)}
                                     </p>
                                 </div>

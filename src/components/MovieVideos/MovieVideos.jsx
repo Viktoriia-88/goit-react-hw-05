@@ -23,7 +23,7 @@ export default function MovieVideo() {
                         (video) => video.site === "YouTube" && video.type === "Trailer"
                     )
                 );
-            } catch (error) {
+            } catch {
                 setIsError(true);
             } finally {
                 setIsLoading(false);

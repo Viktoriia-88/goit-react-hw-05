@@ -13,13 +13,12 @@
 
 .topic {
     margin-top: 5px;
-    color: rgb(142, 235, 79);
+    color: #7aea2f;
     max-width: 150px;
     font-size: 14px;
 }
 
 .dscr {
-    font-style: italic;
     max-width: 150px;
-    font-size: 14px;
+    font-size: 12px;
 }

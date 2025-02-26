@@ -24,7 +24,7 @@ export default function MovieReviews() {
                     (a, b) => new Date(b.created_at) - new Date(a.created_at)
                 );
                 setReviews(sortedReviews);
-            } catch (error) {
+            } catch {
                 setIsError(true);
             } finally {
                 setIsLoading(false);

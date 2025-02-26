@@ -9,14 +9,10 @@
 
 .topic {
     margin-bottom: 5px;
-    color: rgb(142, 235, 79);
+    color: #7aea2f;
     display: flex;
     gap: 10px;
     align-items: center;
-}
-
-.dscr {
-    font-style: italic;
 }
 
 .text {

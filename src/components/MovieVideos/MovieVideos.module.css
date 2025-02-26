@@ -3,13 +3,7 @@
 }
 
 .video {
-    width: 335px;
+    min-width: 560px;
+    min-height: 315px;
     margin-bottom: 15px;
-}
-
-@media screen and (min-width: 768px) {
-    .video {
-        min-width: 560px;
-        min-height: 315px;
-    }
 }
